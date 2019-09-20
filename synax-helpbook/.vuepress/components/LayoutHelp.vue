@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Content />
+    <Content  class="theme-container"/>
   </div>
 </template>
 
@@ -10,6 +10,7 @@
     Notification
   } from 'element-ui';
   import 'element-ui/lib/theme-chalk/index.css';
+  import '../../../weekly/.vuepress/theme/typora-themes-css/li.css'
   export default {
     data() {
       return {}

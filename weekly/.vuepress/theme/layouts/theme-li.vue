@@ -32,7 +32,9 @@
       AreaComment,
     },
     data() {
-      return {};
+      return {
+        // pageConfig: {}
+      };
     },
     computed: {
       pageConfig() {
@@ -77,7 +79,43 @@
           };
           sharing(shareInfo);
         }
-      }
+      },
+      // 第三方环境中“请到浏览器中打开”的提示弹窗
+      dialogBox(opt) {
+        var imageClassName = opt.imageClassName,
+          image = opt.image
+        var box = document.createElement('div');
+        box.className = 'dialog dialog-bg';
+        box.innerHTML += '<img class="' + imageClassName + '" src="' + image + '"/>'
+        box.innerHTML += '    </div>';
+        box.addEventListener('click', function(e) {
+          opt.cancel && opt.cancel(close);
+        });
+        box.addEventListener('touchmove', function(e) {
+          e.preventDefault();
+        });
+        var container = document.getElementsByClassName('theme-container')[0];
+        container.appendChild(box);
+        function close() {
+          box.style.animation = 'fadeOut .2s linear';
+          window.setTimeout(function() {
+            container.removeChild(box);
+          }, 100)
+        }
+      },
+      toBrowser(cb) {
+        this.dialogBox({
+          image: 'http://official-web.oss-cn-beijing.aliyuncs.com/towords/avatars/wechat_bg.png',
+          imageClassName: 'to-browser',
+          cancel: function(close) {
+            if (cb && (cb instanceof Function)) {
+              cb(close);
+            } else {
+              close();
+            }
+          }
+        })
+      },
     },
     beforeMount() {
       // 向全局绑定env
@@ -86,7 +124,7 @@
       this.$handleEnvCheck = this.$root.$handleEnvCheck = (fn) => {
         // 如果在第三方（微信，微博）浏览器环境，弹出“请到浏览器中打开”
         if (this.$env.thirdParty) {
-          alert('第三方');
+          this.toBrowser();
           // 如果在浏览器中，则唤醒拓词app，并在拓词app中打开当前页面
         } else if (!this.thirdParty && !this.$env.towords.istowords) {
           this.$env.openApp instanceof Function && this.$env.openApp()
@@ -95,6 +133,7 @@
           fn instanceof Function && fn(this.$env);
         }
       };
+      // 重置页面rem
       ~ function REMResize() {
         var rate = 3.75,
           $html = document.querySelector("html"),
@@ -104,13 +143,13 @@
         window.onresize !== REMResize ? window.onresize = REMResize : '';
       }();
     },
-    mounted() {
-      this.share();
+    mounted() { 
+      this.share(); // 网页分享
     }
   };
 </script>
 
-<style lang="stylus" scoped>
+<style lang="stylus">
 .btn__write__exp {
         position: fixed;
         width: 64px;
@@ -201,5 +240,43 @@
         font-weight: 400;
         background: linear-gradient(270deg, rgba(94, 90, 184, 1) 0%, rgba(206, 39, 82, 1) 100%);
         border-radius: 0px .09rem 0 0px;
+    }
+     .dialog {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right:0;
+        bottom: 0;
+        transition: all ease-in 2s;
+    }
+    .dialog-bg {
+        height: 100%;
+        width: 100%;
+        background: rgba(32, 38, 54, .8);
+        animation: fadeIn .2s linear;
+        z-index: 9999;
+    }
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    @keyframes fadeOut {
+        0% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+    .dialog .to-browser {
+        position: absolute;
+        right: 0;
+        top: 0;
+        margin: 40px 80px;
+        width: 200px;
     }
 </style>

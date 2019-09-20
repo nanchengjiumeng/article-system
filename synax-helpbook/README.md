@@ -1,5 +1,6 @@
 ---
 layout: LayoutHelp
+title: 帮助页面
 ---  
 
 # title:

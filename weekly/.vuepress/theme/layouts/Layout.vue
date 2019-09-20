@@ -1,3 +1,13 @@
-<script type='text/ecmascript-6'>
+<template>
+    <Content/>
+</template>
 
+<script type='text/ecmascript-6'>
+  export default {
+    data () {
+      return {
+      }
+    }
+  }
 </script>
+

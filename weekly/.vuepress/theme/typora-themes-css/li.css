@@ -1,13 +1,17 @@
+/* 
+START 基于typora进行二次开发
+*/
 html,body{
   font-size: 14px;
   max-width: 720px;
   margin: 0 auto;
   padding: 0;
 }
-img{
+img, video, audio{
   border: 0;
   display: block;
   max-width: 100%;
+  margin: 0 auto;
 }
 .markdown-here-wrapper {
   font-size: 16px;
@@ -16,6 +20,8 @@ img{
   padding: 15px;
 }
 
+
+/*  END */
 pre,
 code {
   font-size: 14px;

@@ -4,6 +4,7 @@ let port = 8010;
 module.exports = env => {
   printLink();
   return {
+    mode: 'development',
     devServer: {
         contentBase: [
           path.join(__dirname, './weekly/.vuepress/dist' ),
@@ -11,7 +12,7 @@ module.exports = env => {
         ],
         host: address,
         port
-    }
+    },
   };
 };
 
