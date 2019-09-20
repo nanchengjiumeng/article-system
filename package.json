@@ -23,8 +23,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "open": "concurrently \"npm run check\" \"npm run article::dev\"",
     "check": "webpack-dev-server --open",
-    "help::dev" : "vuepress dev synax-helpbook --no-cache --no-clear-screen --open",
-    "help::build" : "vuepress build synax-helpbook --no-cache",
+    "help::dev": "vuepress dev synax-helpbook --no-cache --no-clear-screen --open",
+    "help::build": "vuepress build synax-helpbook --no-cache",
     "article::dev": "vuepress dev weekly   --no-cache --no-clear-screen --open",
     "article::build": "vuepress build weekly   --no-cache"
   },
