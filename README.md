@@ -5,6 +5,24 @@ pageClass: theme-techo
 # article-system 文章系统
 
 ## 使用帮助
+```
+git pull origin master
+```
+
+
+```
+git add .
+```
+
+
+```
+git commit -m"一些注释"
+```
+
+```
+git push origin master
+```
+
 
 ## 1.0 代办事项
 
