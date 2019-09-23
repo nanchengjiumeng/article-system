@@ -79,7 +79,7 @@ QQ音乐一度瘫痪，
 </div>
 ```
 
-<img src="./asset/23/640-1.jpg" alt="图片不显示时，显示这段文字.">
+<img src="../weekly/asset/23/640-1.jpg" alt="图片不显示时，显示这段文字.">
 
  ```css
  <img src="./asset/23/640-1.jpg" alt="图片不显示时，显示这段文字.">
