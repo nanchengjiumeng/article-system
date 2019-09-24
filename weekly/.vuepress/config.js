@@ -4,6 +4,7 @@ let ossWeeklyUlrPre =
   "https://official-web.oss-cn-beijing.aliyuncs.com/towords/weekly/";
 
 module.exports = {
+  host: '192.168.2.27',
   head: [
     [
       "link",
