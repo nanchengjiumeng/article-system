@@ -84,3 +84,11 @@ QQ音乐一度瘫痪，
  ```css
  <img src="./asset/23/640-1.jpg" alt="图片不显示时，显示这段文字.">
  ```
+
+
+ ```css
+ <audio :src="(()=>require('./asset/21/ending.mp3'))()" controls />
+ ```
+
+
+ <a href="http://xiaomai.towords.com:3001/#/collins_tool">外部链接</a>
