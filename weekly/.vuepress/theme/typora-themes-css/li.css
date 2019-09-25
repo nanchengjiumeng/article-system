@@ -13,7 +13,6 @@ img, video, audio{
   display: block;
   max-width: 100%;
   margin: 0 auto;
-  box-shadow: 0 0 5px 0 #ddd;
 }
 .markdown-here-wrapper {
   font-size: 16px;
@@ -22,6 +21,9 @@ img, video, audio{
   padding: 15px;
 }
 
+.markdown-here-wrapper img{
+  box-shadow: 0 0 5px 0 #ddd;
+}
 a.video{
   position: relative;
   display: block;
