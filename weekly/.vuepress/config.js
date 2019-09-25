@@ -34,6 +34,7 @@ module.exports = {
       }
     ]
   ],
+  base: '/towords/weekly/',
   dest: path.resolve(__dirname, '../../dist'),
   themeConfig: {
     navbar: false,
@@ -104,6 +105,6 @@ module.exports = {
       });
 
       process.env.NODE_ENV === "production" &&
-      config.output.publicPath('./')
+      config.output.publicPath('/towords/weekly/')
   }
 };

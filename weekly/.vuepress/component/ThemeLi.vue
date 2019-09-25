@@ -16,7 +16,7 @@
         <div class="btn__buy pay__btn" @click="gotoLink">立即支付</div>
     </div>
     <!-- 自定义按钮 写心得 -->
-    // <div class="btn__write__exp" v-if="pageConfig['btn-wirte-exp']" @click="handleWriteExp">
+    <div class="btn__write__exp" v-if="pageConfig['btn-wirte-exp']" @click="handleWriteExp">
     <!-- <div id="btn__write__exp"></div> -->
     
     </div>
