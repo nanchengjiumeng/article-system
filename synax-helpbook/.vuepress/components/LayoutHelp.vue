@@ -37,7 +37,7 @@
     },
     mounted() {
       this.initCopyBoard();
-      console.log('help');
+
     }
   }
 </script>

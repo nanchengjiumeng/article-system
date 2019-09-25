@@ -4,7 +4,7 @@ let ossWeeklyUlrPre =
   "https://official-web.oss-cn-beijing.aliyuncs.com/towords/weekly/";
 
 module.exports = {
-  host: '192.168.2.27',
+  // host: '192.168.2.27',
   head: [
     [
       "link",
@@ -61,7 +61,8 @@ module.exports = {
     // vueLoader.options.transformToRequire = {
     //   audio: "src"
     // };
-    config.module.rule("htmls").test(/\.html$/).use["html-withimg-loader"];
+    // config.module.rule("htmls").test(/\.html$/).use["html-withimg-loader"];
+
     process.env.NODE_ENV === "production" &&
       config.module
         .rule("images")
@@ -72,7 +73,7 @@ module.exports = {
           limit: inlineLimit,
           publicPath:
             process.env.NODE_ENV === "production"
-              ? "http://official-web.oss-cn-beijing.aliyuncs.com/towords/weekly/"
+              ? "https://official-web.oss-cn-beijing.aliyuncs.com/towords/weekly/"
               : "./",
           name: function(file) {
             let filepathParsed = file.split("/"),

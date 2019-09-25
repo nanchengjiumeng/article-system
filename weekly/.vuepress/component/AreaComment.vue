@@ -1,9 +1,9 @@
 <template>
-    <div class="area__comment">
-        <header class="comment__header">
+    <div class="area__comment" >
+        <!-- <div class="comment__header" @click="handle">
             心得
-        </header>
-        <ul v-infinite-scroll="loadMore" infinite-scroll-disabled="loading" infinite-scroll-distance="10">
+        </div> -->
+        <ul  v-infinite-scroll="loadMore" infinite-scroll-disabled="loading" infinite-scroll-distance="500">
             <li v-for="item in list" @click="handleItemClicked(item)">
                 <ItemComment :itemData="item" />
             </li>
@@ -30,6 +30,10 @@
         },
         // 接收祖先组件theme-li.vue传来的Env()实例
         methods: {
+            handle(){
+                console.log(123);
+                
+            },
             // id: 心得id
             handleItemClicked({
                 id
@@ -42,7 +46,7 @@
                 })
             },
             loadMore() {
-                this.loading = true;
+                this.loading = true;    
                 if (this.list.length === 0) {
                     this.topicInfo && getExperienceList({
                         topicId: this.topicInfo.topicId,

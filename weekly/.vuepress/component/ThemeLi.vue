@@ -1,8 +1,8 @@
 <template>
-  <div class="theme-container">
-    <Content class="markdown-here-wrapper" />
-    <AreaComment class="area__comment" :topicInfo="{topicId: pageConfig['topic-id'], topicName: pageConfig['topic-name']}" v-if="pageConfig.comment" />
+  <div>
+    <AreaComment ref="comment" class="area__comment" :topicInfo="{topicId: pageConfig['topic-id'], topicName: pageConfig['topic-name']}" />
     <!-- 自定义按钮 底部跳转 -->
+    <div v-if="pageConfig['footer-type']" style="height:1rem"></div>
     <div v-if="pageConfig['footer-type'] === 1" class="footer__fixed">
       <!-- <a :href="gotoLink">{{custom_btn.text}}</a> -->
       <div class="timer">限时赠4个月会员，价值120元</div>
@@ -13,33 +13,34 @@
         </div>
         <div class="bottom">任务完成，契约金100元全额返还</div>
       </div>
-      <a :href="'gotoLink'">
-        <div class="btn__buy pay__btn">立即支付</div>
-      </a>
+        <div class="btn__buy pay__btn" @click="gotoLink">立即支付</div>
     </div>
     <!-- 自定义按钮 写心得 -->
-    <div class="btn__write__exp" v-if="pageConfig['btn-wirte-exp']" @click="handleWriteExp">
+    // <div class="btn__write__exp" v-if="pageConfig['btn-wirte-exp']" @click="handleWriteExp">
+    <!-- <div id="btn__write__exp"></div> -->
+    
     </div>
   </div>
 </template>
 
 <script type='text/ecmascript-6'>
-  import AreaComment from '../../components/AreaComment.vue'; //评论区
-  import "../typora-themes-css/li.css"
-  import sharing from '../../utils/sharing'
+  import "../theme/typora-themes-css/li.css"
+  import sharing from '../utils/sharing'
+  import AreaComment from './AreaComment.vue'
   export default {
-    components: {
-      AreaComment,
+    components:{
+      AreaComment
     },
     data() {
       return {
         // pageConfig: {}
+        // linkMGY: '',
       };
     },
     computed: {
       pageConfig() {
         return {
-          'comment': this.$frontmatter['topic-id'] && this.$frontmatter['topic-name'],
+          'comment': !!(this.$frontmatter['topic-id'] && this.$frontmatter['topic-name']),
           'btn-wirte-exp': this.$frontmatter['btn-wirte-exp'],
           'footer-type': this.$frontmatter['footer-type'],
           'topic-id': this.$frontmatter['topic-id'],
@@ -49,13 +50,6 @@
           'share-icon-url': this.$frontmatter['share-icon-url'],
         }
       }
-      //   gotoLink() {
-      //     if (navigator.userAgent.indexOf('towords') >= 0) {
-      //       return this.custom_btn.url + location.search;
-      //     } else {
-      //       return this.custom_btn.url;
-      //     }
-      //   }
     },
     methods: {
       handleWriteExp() {
@@ -80,6 +74,14 @@
           sharing(shareInfo);
         }
       },
+      gotoLink() {
+        var url = "https://wx.towords.com/towordscamp/mo_gui_ying_2"
+        if (navigator.userAgent.indexOf('towords') >= 0) {
+          location.href = url + location.search;
+        } else {
+          location.href = url;
+        }
+      },
       // 第三方环境中“请到浏览器中打开”的提示弹窗
       dialogBox(opt) {
         var imageClassName = opt.imageClassName,
@@ -94,7 +96,7 @@
         box.addEventListener('touchmove', function(e) {
           e.preventDefault();
         });
-        var container = document.getElementsByClassName('theme-container')[0];
+        var container = document.body;  
         container.appendChild(box);
         function close() {
           box.style.animation = 'fadeOut .2s linear';
@@ -116,8 +118,30 @@
           }
         })
       },
+      // initBtnWriteExp(){
+      //   // <div class="btn__write__exp" v-if="pageConfig['btn-wirte-exp']" @click="handleWriteExp">
+      //   const btn = document.querySelector("#btn__write__exp");
+      //   console.log(btn);
+        
+      //   const div = document.createElement('div');
+      //   div.className = 'btn__write__exp';
+      //   div.addEventListener('click',()=>{
+      //      this.handleWriteExp();
+      //   })
+      //   btn.append(div);
+      // },
+      // initGotoLink(){
+      //   var btn = document.querySelector('.btn__buy.pay__btn');
+      //   btn.addEventListener('click', ()=>{
+      //     this.gotoLink();
+      //   })
+      // }
+    },
+    mounted(){
+      
     },
     beforeMount() {
+      this.share(); // 网页分享
       // 向全局绑定env
       this.$env = this.$root.$env = new Env();
       // 接收一个函数后进行环境判断
@@ -143,9 +167,6 @@
         window.onresize !== REMResize ? window.onresize = REMResize : '';
       }();
     },
-    mounted() { 
-      this.share(); // 网页分享
-    }
   };
 </script>
 
