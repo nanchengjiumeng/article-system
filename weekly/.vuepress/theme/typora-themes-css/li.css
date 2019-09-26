@@ -13,7 +13,6 @@ img, video, audio{
   display: block;
   max-width: 100%;
   margin: 0 auto;
-  box-shadow: 0 0 5px 0 #ddd;
 }
 .markdown-here-wrapper {
   font-size: 16px;
@@ -21,8 +20,29 @@ img, video, audio{
   letter-spacing: 0.1em;
   padding: 15px;
 }
-img.video{
-  
+
+.markdown-here-wrapper img{
+  box-shadow: 0 0 5px 0 #ddd;
+}
+a.video{
+  position: relative;
+  display: block;
+}
+a.video::after{
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .4);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background-image: url("https://official-web.oss-cn-beijing.aliyuncs.com/towords/weekly/icon/play_009688.png");
+  background-repeat: no-repeat;
+  background-size: 62px 50px;
+  background-position: 50% 50%;
 }
 
 /*  END */

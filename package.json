@@ -15,6 +15,7 @@
     "vue-infinite-loading": "^2.4.4"
   },
   "devDependencies": {
+    "@vuepress/plugin-back-to-top": "^1.0.0-rc.1",
     "vuepress": "^1.1.0",
     "webpack-cli": "^3.3.9",
     "webpack-dev-server": "^3.8.1"
@@ -26,7 +27,8 @@
     "help::dev": "vuepress dev synax-helpbook --no-cache --no-clear-screen --open",
     "help::build": "vuepress build synax-helpbook --no-cache",
     "article::dev": "vuepress dev weekly   --port 8003  --no-cache --no-clear-screen --open",
-    "article::build": "vuepress build weekly   --no-cache"
+    "article::build": "vuepress build weekly   --no-cache",
+    "vh": "vuepress build --help"
   },
   "repository": {
     "type": "git",

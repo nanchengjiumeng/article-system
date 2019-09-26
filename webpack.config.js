@@ -7,7 +7,7 @@ module.exports = env => {
     mode: 'development',
     devServer: {
         contentBase: [
-          path.join(__dirname, './weekly/.vuepress/dist' ),
+          // path.join(__dirname, './weekly/.vuepress/dist' ),
           path.join(__dirname, './synax-helpbook/.vuepress/dist' ),
           path.join(__dirname, 'dist' ),
         ],
