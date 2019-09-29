@@ -117,3 +117,38 @@ PS: 内容来自公众号「Nora的英文小栈」
 456
 </div>
 
+信纸模式 
+</div>
+
+<div style="background: url(http://official-web.oss-cn-beijing.aliyuncs.com/towords/weekly/22/letter.jpg);padding:10px;border: 2px solid DarkSeaGreen">
+
+养在深闺， 天天做女红就可以阻挡爱情的到来吗？No way, 林语堂说：“ love will always a way" 情不知所起，一往而深。 
+
+日语的siri和英文的siri不一样
+
+</div>
+
+
+文字链接跳转
+
+<a href="https://www.topschool.com/towords_learning_experience?experience_id=89163&userId=s15175094362398">
+<<div style="background: url(http://official-web.oss-cn-beijing.aliyuncs.com/towords/weekly/22/letter.jpg);padding:10px;">
+
+当控制不住眼泪却还一声不吭抹开眼泪看拓词的时候。真的很丧啊。我尽力了，可我控制不了。大家比赛的比赛，拿奖的拿奖，面试的面试，考研的考研，保研的保研，拿奖学金的拿奖学金，只有我一直在不停的后退。早就做不到了，那个会努力的自己。如果我的丧让你感到厌烦，对不起，我会不再出现在你面前。晚安，再也不安。
+
+</div>
+
+</p>
+>
+</a>
+
+跳转视频
+
+<p style="text-align:center">▼<br>最～</p>
+
+</p>
+
+<a href="https://weibo.com/tv/v/I8pz6nhvG?fid=1034:4420048861987190">
+<img class="video" src="./asset/23/shuohaobuku.jpeg" alt="【说好不哭 Won't Cry】MV">
+</a>
+
