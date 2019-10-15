@@ -118,7 +118,7 @@ PS: 内容来自公众号「Nora的英文小栈」
 </div>
 
 信纸模式 
-</div>
+
 
 <div style="background: url(http://official-web.oss-cn-beijing.aliyuncs.com/towords/weekly/22/letter.jpg);padding:10px;border: 2px solid DarkSeaGreen">
 
@@ -152,3 +152,15 @@ PS: 内容来自公众号「Nora的英文小栈」
 <img class="video" src="./asset/23/shuohaobuku.jpeg" alt="【说好不哭 Won't Cry】MV">
 </a>
 
+背景换颜色，边框换颜色
+</div>
+
+<div style="background: lightsteelblue;padding:15px;font-size:12px; border: 1px lightgrey">
+<i>Taken with</i> previous studies, the new research <b>offers a</b> two-part <b>answer to</b> why grammar rules are built—and lost. 
+
+</div>
+
+字体换颜色， 无背景， 边框换颜色
+<div style="color:#888888;font-size:11.5px; border: 1px lightgrey">
+PS: 内容转自公众号Nora的英文小栈（herteabreak）
+</div>
