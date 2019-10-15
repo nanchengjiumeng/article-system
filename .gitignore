@@ -2,3 +2,4 @@ node_modules
 weekly/.vuepress/dist
 weekly/.DS_Store
 .DS_Store
+dist
