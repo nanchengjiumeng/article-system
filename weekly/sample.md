@@ -164,3 +164,10 @@ PS: 内容来自公众号「Nora的英文小栈」
 <div style="color:#888888;font-size:11.5px; border: 1px lightgrey">
 PS: 内容转自公众号Nora的英文小栈（herteabreak）
 </div>
+
+精读课格式
+<p style="text-align:center"><span style="background: rgb(255, 99, 71);color:#fff; font-size: ">重点讲解|第X段</span></p>
+
+<p style="text-align:center"><span style="background: rgb(255, 99, 71);color:#fff; font-size: ">Nora读后感|第x段</span></p>
+
+<p style="text-align:center"><span style="background: rgb(255, 99, 71);color:#fff; font-size: ">词汇表|第X段</span></p>
