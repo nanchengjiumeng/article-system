@@ -171,3 +171,29 @@ PS: 内容转自公众号Nora的英文小栈（herteabreak）
 <p style="text-align:center"><span style="background: rgb(255, 99, 71);color:#fff; font-size: ">Nora读后感|第x段</span></p>
 
 <p style="text-align:center"><span style="background: rgb(255, 99, 71);color:#fff; font-size: ">词汇表|第X段</span></p>
+
+<font face="verdana" color="green">This is some text!</font><br>
+<font face="courier" color="green">This is some text!</font><br>
+<font face="cursive" color="green">This is some text!</font><br>
+<font face="fantasy" color="green">This is some text!</font><br>
+<font face="impact" color="green">This is some text!</font><br>
+<font face="monospace" color="green">This is some text!</font><br>
+<font face="serif" color="green">This is some text!</font><br>
+<font face="comic sans ms" color="green">This is some text!</font><br>
+<font face="system-ui" color="green">This is some text!</font><br>
+<font face="gill sans" color="green">This is some text!</font><br>
+<font face="georgia" color="green">This is some text!</font><br>
+
+<font face="hiragino sans GB" color="green">风花雪月小桥流水!</font><br>
+<font face="stheiti light" color="green">风花雪月小桥流水!</font><br>
+<font face="stkaiti" color="green">风花雪月小桥流水!</font><br>
+<font face="stsong" color="green">风花雪月小桥流水!</font><br>
+<font face="stfangsong" color="green">风花雪月小桥流水!</font><br>
+<font face="LiHei Pro Medium" color="green">风花雪月小桥流水!</font><br>
+<font face="LiSong Pro Light" color="green">风花雪月小桥流水!</font><br>
+<font face="BiauKai" color="green">风花雪月小桥流水!</font><br>
+<font face="Apple LiSung Light" color="green">风花雪月小桥流水!</font><br>
+
+字体
+<div style="font-size:10px;font-family:stfangsong">
+</div>
