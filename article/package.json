@@ -1,0 +1,31 @@
+{
+  "name": "article-system",
+  "version": "1.0.0",
+  "description": "文章系统",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {
+    "axios": "^0.19.0",
+    "copy-text-to-clipboard": "^2.1.0",
+    "element-ui": "^2.12.0",
+    "mint-ui": "^2.2.13",
+    "url-loader": "^1.1.1",
+    "vue-infinite-loading": "^2.4.4"
+  },
+  "devDependencies": {
+    "@vuepress/plugin-back-to-top": "^1.0.0-rc.1",
+    "vuepress": "^1.1.0",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.8.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "open": "concurrently \"npm run check\" \"npm run article::dev\"",
+    "check": "webpack-dev-server --open",
+    "dev": "vuepress dev . --port 8003  --no-cache --no-clear-screen --open",
+    "build": "vuepress build . --no-cache"
+  },
+  "homepage": "https://github.com/nanchengjiumeng/article-system#readme"
+}
