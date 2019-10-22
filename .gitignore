@@ -3,3 +3,4 @@ weekly/.vuepress/dist
 weekly/.DS_Store
 .DS_Store
 dist
+dist_*

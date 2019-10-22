@@ -27,7 +27,7 @@
     "help::dev": "vuepress dev synax-helpbook --no-cache --no-clear-screen --open",
     "help::build": "vuepress build synax-helpbook --no-cache",
     "weekly::dev": "vuepress dev weekly   --port 8003  --no-cache --no-clear-screen --open",
-    "weekly::build": "vuepress build weekly   --no-cache",
+    "weekly::build": "vuepress build weekly  --no-cache",
     "vh": "vuepress build --help"
   },
   "repository": {

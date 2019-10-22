@@ -1,7 +1,12 @@
 let path = require("path");
 let inlineLimit = 10000;
+
+// vuepress dev weekly -> weekly
+const defaultDir = process.argv[3];
+
 let ossWeeklyUlrPre =
-  "https://official-web.oss-cn-beijing.aliyuncs.com/towords/weekly/";
+  `https://official-web.oss-cn-beijing.aliyuncs.com/towords/${defaultDir}/`;
+
 
 module.exports = {
   // host: '192.168.2.27',
@@ -34,8 +39,8 @@ module.exports = {
       }
     ]
   ],
-  base: '/towords/weekly/',
-  dest: path.resolve(__dirname, '../../dist'),
+  base: `/towords/${defaultDir}/`,
+  dest: path.resolve(__dirname, `../../dist_${defaultDir}`),
   themeConfig: {
     navbar: false,
     search: false,
@@ -74,13 +79,13 @@ module.exports = {
           limit: inlineLimit,
           publicPath:
             process.env.NODE_ENV === "production"
-              ? "https://official-web.oss-cn-beijing.aliyuncs.com/towords/weekly/"
+              ? "https://official-web.oss-cn-beijing.aliyuncs.com/towords/"
               : "./",
           name: function(file) {
             let filepathParsed = file.split("/"),
               filename = filepathParsed.pop();
             let s = filepathParsed.pop() + "/" + filename;
-            return s;
+            return `${defaultDir}/`+s;
           }
         });
 
@@ -94,17 +99,17 @@ module.exports = {
         limit: inlineLimit,
         publicPath:
           process.env.NODE_ENV === "production"
-            ? "http://official-web.oss-cn-beijing.aliyuncs.com/towords/weekly/"
+            ? "http://official-web.oss-cn-beijing.aliyuncs.com/towords/"
             : "/",
         name: function(file) {
           let filepathParsed = file.split("/"),
             filename = filepathParsed.pop();
           let s = filepathParsed.pop() + "/" + filename;
-          return s;
+          return `${defaultDir}` + s;
         }
       });
 
       process.env.NODE_ENV === "production" &&
-      config.output.publicPath('/towords/weekly/')
+      config.output.publicPath(`/towords/${defaultDir}/`)
   }
 };
