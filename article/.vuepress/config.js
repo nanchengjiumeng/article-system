@@ -1,4 +1,5 @@
 let path = require("path");
+const generateMainMd = require("./utils/dir")
 let inlineLimit = 10000;
 
 module.exports = {
@@ -47,9 +48,13 @@ module.exports = {
             line: 274
     */
     // config.optimization.splitChunks();
+    const production = process.env.NODE_ENV === "production"
 
+    // 生成默认md
+    !production && generateMainMd()
+    
     console.log("---------");
-    console.log('当前为生产环境' + process.env.NODE_ENV === "production");
+    console.log('当前为生产环境:' + production);
     console.log("---------");
 
     // const vueLoader = config.module.rules.find(
@@ -62,7 +67,7 @@ module.exports = {
     // config.module.rule("htmls").test(/\.html$/).use["html-withimg-loader"];
 
 
-    process.env.NODE_ENV === "production" &&
+    production &&
       config.module
         .rule("images")
         .test(/\.(png|jpe?g|gif)(\?.*)?$/)
@@ -71,13 +76,13 @@ module.exports = {
         .options({
           limit: inlineLimit,
           publicPath:
-            process.env.NODE_ENV === "production"
+            production
               ? "https://official-web.oss-cn-beijing.aliyuncs.com/towords/"
               : "./",
           name: assetName
         });
 
-    process.env.NODE_ENV === "production" &&
+    production &&
     config.module
       .rule("media")
       .test(/\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/)
@@ -86,13 +91,13 @@ module.exports = {
       .options({
         limit: inlineLimit,
         publicPath:
-          process.env.NODE_ENV === "production"
+          production
             ? "http://official-web.oss-cn-beijing.aliyuncs.com/towords/"
             : "/",
         name: assetName
       });
 
-      process.env.NODE_ENV === "production" &&
+      production &&
       config.output.publicPath(`/towords/`)
   }
 };
