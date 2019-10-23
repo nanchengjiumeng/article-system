@@ -1,6 +1,7 @@
 <template>
   <div>
-    <AreaComment v v-if="pageConfig['commet']" ref="comment" class="area__comment" :topicInfo="{topicId: pageConfig['topic-id'], topicName: pageConfig['topic-name']}" />
+    <Watermark v-if="pageConfig['watermark']"  :watermark="pageConfig['watermark']"/>
+    <AreaComment  v-if="pageConfig['commet']" ref="comment" class="area__comment" :topicInfo="{topicId: pageConfig['topic-id'], topicName: pageConfig['topic-name']}" />
     <!-- 自定义按钮 底部跳转 -->
     <div v-if="pageConfig['footer-type']" style="height:1rem"></div>
     <div v-if="pageConfig['footer-type'] === 1" class="footer__fixed">
@@ -27,9 +28,11 @@
   import "../theme/typora-themes-css/li.css"
   import sharing from '../utils/sharing'
   import AreaComment from './AreaComment.vue'
+  import Watermark from './Watermark.vue'
   export default {
     components:{
-      AreaComment
+      AreaComment,
+      Watermark
     },
     data() {
       return {
@@ -48,6 +51,7 @@
           'share-title': this.$frontmatter['share-title'],
           'share-description': this.$frontmatter['share-description'],
           'share-icon-url': this.$frontmatter['share-icon-url'],
+          'watermark': this.$frontmatter['watermark'], //水印配置
         }
       }
     },
