@@ -5,6 +5,13 @@ pageClass: theme-techo
 # article-system 文章系统
 
 ## 使用帮助
+
+```
+cd article/
+
+npm run dev
+```
+
 ```
 git pull origin master
 ```
