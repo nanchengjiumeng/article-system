@@ -17,12 +17,13 @@ share-icon-url:  "123"
 - [weekly/25](weekly/25)
 - [weekly/26](weekly/26)
 - [weekly/27](weekly/27)
+- [weekly/28](weekly/28)
 - [weekly/README](weekly/README)
 - [weekly/sample](weekly/sample)
 # eco
 - [eco/eco1016](eco/eco1016)
 - [eco/eco1017](eco/eco1017)
 - [eco/eco1024](eco/eco1024)
-- [eco/economist1031](eco/economist1031)
+- [eco/eco1031](eco/eco1031)
 
 

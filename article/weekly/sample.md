@@ -196,6 +196,7 @@ PS: 内容转自公众号Nora的英文小栈（herteabreak）
 
 字体
 <div style="font-size:10px;font-family:stfangsong">
+
 </div>
 单词列表
 <div style="text-align:center; background: snow;padding:15px;color:#888888;font-size:10px; border: 1px lightgrey">
@@ -204,3 +205,6 @@ PS: 内容转自公众号Nora的英文小栈（herteabreak）
 红色边框
 <div style="text-align:center; font-family:cursive;background: white; padding:10px; border: 2px solid Darkred">
 </div>
+
+<span style="background: salmon;color:white; font-size:14px ">超过</span>
+红色北京白色字
