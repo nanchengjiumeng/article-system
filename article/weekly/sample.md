@@ -208,3 +208,22 @@ PS: 内容转自公众号Nora的英文小栈（herteabreak）
 
 <span style="background: salmon;color:white; font-size:14px ">超过</span>
 红色北京白色字
+
+图片缩小尺寸
+
+
+<img src="./asset/eco1024/lift.jpg" alt="全球榜单" style="width:50%">
+
+
+
+Epiphany 顿悟
+An epiphany is an experience of sudden and striking realization.
+一个词讲了一个故事的感觉 : )
+
+I&apos;m very fortunate in that I don&apos;t have to do the washing-up or the dusting.","tran":"我很幸运，因为我不用洗餐具也不用打扫灰尘
+
+也许从他的眼神中能感受到
+是在黑暗困境中沉默却坚韧的光 ​​​​
+自然的光， 
+秋天的阳关
+大家的坚韧的光
