@@ -18,6 +18,7 @@ share-icon-url:  "123"
 - [weekly/26](weekly/26)
 - [weekly/27](weekly/27)
 - [weekly/28](weekly/28)
+- [weekly/29](weekly/29)
 - [weekly/README](weekly/README)
 - [weekly/sample](weekly/sample)
 # eco
@@ -25,5 +26,6 @@ share-icon-url:  "123"
 - [eco/eco1017](eco/eco1017)
 - [eco/eco1024](eco/eco1024)
 - [eco/eco1031](eco/eco1031)
+- [eco/eco1107](eco/eco1107)
 
 
