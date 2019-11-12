@@ -1,7 +1,7 @@
 <template>
   <div>
     <Watermark v-if="pageConfig['watermark']"  :watermark="pageConfig['watermark']"/>
-    <AreaComment  v-if="pageConfig['commet']" ref="comment" class="area__comment" :topicInfo="{topicId: pageConfig['topic-id'], topicName: pageConfig['topic-name']}" />
+    <AreaComment  v-if="pageConfig['comment']" ref="comment" class="area__comment" :topicInfo="{topicId: pageConfig['topic-id'], topicName: pageConfig['topic-name']}" />
     <!-- 自定义按钮 底部跳转 -->
     <div v-if="pageConfig['footer-type']" style="height:1rem"></div>
     <div v-if="pageConfig['footer-type'] === 1" class="footer__fixed">
@@ -14,7 +14,7 @@
         </div>
         <div class="bottom">任务完成，契约金100元全额返还</div>
       </div>
-        <div class="btn__buy pay__btn" @click="gotoLink">立即支付</div>
+        <div class="btn__buy pay__btn" @click="gotoLink">立即报名<br>魔鬼营</div>
     </div>
     <!-- 自定义按钮 写心得 -->
     <div class="btn__write__exp" v-if="pageConfig['btn-wirte-exp']" @click="handleWriteExp">
@@ -237,16 +237,17 @@
         right: 0;
         width: 1.15rem;
         height: 100%;
-        padding-top: .25rem;
+        padding-top: .15rem;
         padding-bottom: .2rem;
         top: 0;
         background: #d73156;
         text-align: center;
-        font-size: .2rem;
+        font-size: .15rem;
+        line-height .22rem;
         font-family: NotoSansCJKsc-Medium;
         font-weight: 500;
         color: #fff;
-        line-height: 1;
+        // line-height: 1;
         z-index: 9;
     }
     .footer__fixed .timer {
