@@ -20,7 +20,6 @@ share-icon-url:  "123"
 
 <p style="text-align:center"><span style="background: rgb(242, 187, 66);color:#fff; font-size: ">全球榜</span></p>
 
-<img src="./asset/23/global.jpeg" alt="全球榜单">
 
 PS: 最新一周排行榜又来啦。后台时间统计单位为「分钟」，故「小时」排名分先后。
 
