@@ -2,6 +2,7 @@
 START 基于typora进行二次开发
 */
 html,body{
+  word-break: break-all;
   font-size: .14rem;
   max-width: 720px;
   margin: 0 auto;
