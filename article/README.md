@@ -20,6 +20,8 @@ share-icon-url:  "123"
 - [weekly/28](weekly/28)
 - [weekly/29](weekly/29)
 - [weekly/30](weekly/30)
+- [weekly/31](weekly/31)
+- [weekly/32](weekly/32)
 - [weekly/README](weekly/README)
 - [weekly/sample](weekly/sample)
 - [weekly/周报样本](weekly/周报样本)
@@ -34,5 +36,6 @@ share-icon-url:  "123"
 - [eco/eco1128](eco/eco1128)
 - [eco/eco1205](eco/eco1205)
 - [eco/eco1212](eco/eco1212)
+- [eco/ecofriday](eco/ecofriday)
 
 
