@@ -22,6 +22,8 @@ share-icon-url:  "123"
 - [weekly/30](weekly/30)
 - [weekly/31](weekly/31)
 - [weekly/32](weekly/32)
+- [weekly/33](weekly/33)
+- [weekly/34](weekly/34)
 - [weekly/README](weekly/README)
 - [weekly/sample](weekly/sample)
 - [weekly/周报样本](weekly/周报样本)
