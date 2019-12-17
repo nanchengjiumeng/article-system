@@ -38,6 +38,8 @@ share-icon-url:  "123"
 - [eco/eco1128](eco/eco1128)
 - [eco/eco1205](eco/eco1205)
 - [eco/eco1212](eco/eco1212)
+- [eco/eco1219](eco/eco1219)
+- [eco/eco1226](eco/eco1226)
 - [eco/ecofriday](eco/ecofriday)
 
 
