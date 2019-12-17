@@ -22,18 +22,24 @@ module.exports = {
     [
       "script",
       {
-        src: "https://www.topschool.com/js/jweixin-1.2.2.js"
+        src: "https://www.towords.com/_asset/pkg/jweixin@1.4.0/jweixin-1.4.0.js"
       }
     ],
     [
       "script",
       {
-        src: "https://wx.towords.com/js/common/plugins/tbrowser.js"
+        src: "https://www.towords.com/s/common/lib/tbrowser@0.0.1.js"
+      }
+    ],
+    [
+      "script",
+      {
+        src: "https://www.towords.com/_asset/statistics/index.js"
       }
     ]
   ],
-  base: `/towords/`,
-  dest: path.resolve(__dirname, `../../dist_article`),
+  base: `/s/`,
+  dest: path.resolve(__dirname, `../../nora`),
   themeConfig: {
     navbar: false,
     search: false,
@@ -98,7 +104,8 @@ module.exports = {
       });
 
       production &&
-      config.output.publicPath(`/towords/`)
+      // config.output.publicPath(`/towords/`)
+      config.output.publicPath(`/s/`)
   }
 };
 

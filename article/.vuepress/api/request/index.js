@@ -21,7 +21,7 @@ export const getUserInfoByUserId = function (userId) {
 export const getUserInfoByPhoneNumber = function (phoneNumber) {
     return request({
         baseURL: 'https://api.towords.com',
-        url: '/stat/get_user_info.do?mobile_phone='+phoneNumber,
+        url: '/stat/get_user_info.do?mobile_phone=' + phoneNumber,
         method: 'post',
     })
 }
@@ -31,10 +31,20 @@ export const getUserInfoByPhoneNumber = function (phoneNumber) {
 @return {Promise} axios的promise对象
 */
 export const getWxShareData = function (url) {
+    var nonceStr = Math.random()
+        .toString(36)
+        .slice(-8),
+        timestamp = new Date().getTime();
     return request({
-        baseURL: "https://www.topschool.com",
-        url: '/util/get_jssdk_wxconfig.do?url=' + url,
+        baseURL: "https://wx.towords.com",
+        url: `/access/get_signature.do?url=${url}&timestamp=${timestamp}&nonce_str=${nonceStr}`,
         method: 'post',
+    }).then(res => {
+        return {
+            timestamp,
+            nonceStr,
+            signature: res.data.result
+        }
     })
 }
 
