@@ -131,7 +131,7 @@ PS: 内容来自公众号「Nora的英文小栈」
 文字链接跳转
 
 <a href="https://www.topschool.com/towords_learning_experience?experience_id=89163&userId=s15175094362398">
-<<div style="background: url(http://official-web.oss-cn-beijing.aliyuncs.com/towords/weekly/22/letter.jpg);padding:10px;">
+<div style="background: url(http://official-web.oss-cn-beijing.aliyuncs.com/towords/weekly/22/letter.jpg);padding:10px;">
 
 当
 
