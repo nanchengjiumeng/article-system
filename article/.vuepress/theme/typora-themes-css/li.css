@@ -238,3 +238,8 @@ table tr th {
   border: 1px solid #009688;
   background-color: #009688;
 }
+
+.md-header-anchor{
+  margin: 8px 0;
+  display: block;
+}
