@@ -49,6 +49,7 @@ share-icon-url:  "123"
 - [weekly/40](weekly/40)
 - [weekly/41](weekly/41)
 - [weekly/42](weekly/42)
+- [weekly/43](weekly/43)
 - [weekly/5](weekly/5)
 - [weekly/6](weekly/6)
 - [weekly/7](weekly/7)
