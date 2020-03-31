@@ -243,3 +243,7 @@ table tr th {
   margin: 8px 0;
   display: block;
 }
+
+code{
+  background:rgba(0,0,0,.1);
+}

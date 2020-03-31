@@ -59,6 +59,7 @@ share-icon-url:  "123"
 - [weekly/9](weekly/9)
 - [weekly/README](weekly/README)
 - [weekly/sample](weekly/sample)
+- [weekly/t](weekly/t)
 - [weekly/周报样本](weekly/周报样本)
 # eco
 - [eco/eco1016](eco/eco1016)

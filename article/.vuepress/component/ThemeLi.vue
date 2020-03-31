@@ -2,7 +2,10 @@
   <div>
     <div class="a-list">
       <span style="font-size:15px">往期回顾：</span>
-      <a :href="item.href" v-for="(item, idx) in previousReviewFiltered">{{item.title}}</a>
+      <div v-for="(item, idx) in previousReviewFiltered">
+        <span style="display:none">{{item.href}}</span>
+        <a :href="item.href">{{item.title}}</a>
+      </div>
     </div>
     <Watermark v-if="pageConfig['watermark']" :watermark="pageConfig['watermark']" />
     <AreaComment
@@ -58,13 +61,16 @@ export default {
   },
   computed: {
     previousReviewFiltered() {
-      if (this.$frontmatter.period > 0) {
-        return this.previousReview
-          .slice(0, this.$frontmatter.period)
-          .sort(() => -1);
-      } else {
-        return this.previousReview.sort(() => -1);
+      let previous = [];
+      if (this.$frontmatter.period && this.$frontmatter.period > 1) {
+        for (let i = this.$frontmatter.period - 1; i > 0; --i) {
+          previous.push({
+            href: `/s/weekly/${i}.html`,
+            title: `拓词小报·魔鬼营周报第${i}期`
+          });
+        }
       }
+      return previous;
     },
     pageConfig() {
       return {
