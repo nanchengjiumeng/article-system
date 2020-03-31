@@ -28,7 +28,7 @@ module.exports = {
     [
       "script",
       {
-        src: "https://www.towords.com/s/common/lib/tbrowser@0.0.1.js"
+        src: "https://official-web.oss-cn-beijing.aliyuncs.com/towords/jsplugins/towords-browser/towords-browser%401.2.0.min.js"
       }
     ],
     [
