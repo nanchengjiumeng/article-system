@@ -161,30 +161,12 @@ export default {
         }
       });
     }
-    // initBtnWriteExp(){
-    //   // <div class="btn__write__exp" v-if="pageConfig['btn-wirte-exp']" @click="handleWriteExp">
-    //   const btn = document.querySelector("#btn__write__exp");
-    //   console.log(btn);
-
-    //   const div = document.createElement('div');
-    //   div.className = 'btn__write__exp';
-    //   div.addEventListener('click',()=>{
-    //      this.handleWriteExp();
-    //   })
-    //   btn.append(div);
-    // },
-    // initGotoLink(){
-    //   var btn = document.querySelector('.btn__buy.pay__btn');
-    //   btn.addEventListener('click', ()=>{
-    //     this.gotoLink();
-    //   })
-    // }
   },
   mounted() {},
   beforeMount() {
     this.share(); // 网页分享
     // 向全局绑定env
-    this.$env = this.$root.$env = new Env();
+    this.$env = this.$root.$env = window['towords-browser'].default;
     // 接收一个函数后进行环境判断
     this.$handleEnvCheck = this.$root.$handleEnvCheck = fn => {
       // 如果在第三方（微信，微博）浏览器环境，弹出“请到浏览器中打开”
@@ -192,7 +174,7 @@ export default {
         this.toBrowser();
         // 如果在浏览器中，则唤醒拓词app，并在拓词app中打开当前页面
       } else if (!this.thirdParty && !this.$env.towords.istowords) {
-        this.$env.openApp instanceof Function && this.$env.openApp();
+        // this.$env.appapi.openApp();
         // 如果在拓词app中，则执行fn
       } else if (this.$env.towords.istowords) {
         fn instanceof Function && fn(this.$env);

@@ -34,9 +34,7 @@ export default {
     handleItemClicked({ id }) {
       this.$handleEnvCheck(function(env) {
         // 跳转到拓词的心得页面
-        if (env && env.jumpToExp instanceof Function) {
-          env.jumpToExp(id);
-        }
+        env.appapi.jumpToExp(id);
       });
     },
     loadMore() {
@@ -83,7 +81,6 @@ export default {
   },
   mounted() {
     // 拿到theme-li.vue中的定义的Env()实例，和环境检查函数
-    // this.$env = this.$root['$env'];
     this.$handleEnvCheck = this.$root["$handleEnvCheck"];
   }
 };
